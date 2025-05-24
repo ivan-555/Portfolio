@@ -1,0 +1,184 @@
+@use "variables" as var;
+
+.page.project{
+    padding: 0 40px;
+    height: 100vh;
+    overflow: scroll;
+
+    .return-btn{
+        display: block;
+        padding: 40px 0;
+        font-size: 1.7rem;
+        cursor: pointer;
+        transition: all .5s ease;
+
+        &:hover{
+            color: var.$accent-color;
+        }
+    }
+
+    h2{
+        font-size: 3.8rem;
+    }
+
+    h3{
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+
+    p{
+        font-size: 1.1rem;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        width: 60vw;
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+
+        li{
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: var.$accent-color;
+            background: rgba(var.$accent-color, 0.09);
+        }
+    }
+
+    .main-img{
+        width: 70%;
+        height: 600px;
+        margin-top: 50px;
+        border-radius: 10px;
+    }
+
+    h3.features{
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        margin-top: 60px;
+    }
+
+    h4{
+        font-size: 1.4rem;
+        margin: 20px 0 8px 0;
+    }
+
+    span{
+        display: block;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+    }
+
+    .video-wrapper{
+        position: relative;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        display: inline-block;
+        font-size: 0; // entfernt spacing
+        
+        video{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            opacity: 1;
+        }
+        
+        &:hover{
+            .play-overlay{
+                opacity: 0;
+            }
+        }
+        
+        
+        .play-overlay{
+            position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: black;
+            opacity: .2;
+            transition: all .5s ease;
+            
+            i{
+                font-size: 3rem;
+                opacity: 0;
+                transition: all .5s ease;
+
+                &.active{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    .desktop-view{
+        width: 70%;
+        margin-right: 10px;
+    }
+
+    .mobile-view{
+        height: 485px;
+    }
+
+    .full-view{
+        width: 86%;
+        margin-bottom: 10px;
+    }
+
+    &.beatz{
+        .full-view{
+            margin-bottom: 50px;
+        }
+    }
+
+    &.ticktick{
+        .full-view{
+            margin-bottom: 50px;
+        }
+    }
+
+    &.cosmio{
+        .mobile-view{
+            height: 990px;
+        }
+    }
+
+    &.pong{
+        .full-view{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .hosting-wrapper{
+        width: 86%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        position: relative;
+
+        a{
+            width: fit-content;
+            background: none;
+            border: 1px solid var.$accent-color;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all .5s ease;
+
+            &:hover{
+                color: var.$accent-color;
+            }
+        }
+    }
+}

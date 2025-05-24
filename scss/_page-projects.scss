@@ -1,0 +1,136 @@
+@use "variables" as var;
+
+.page.projects{
+    height: 100vh;
+    overflow-y: scroll;
+
+    .heading{
+        display: block;
+        padding: 40px;
+        font-size: 1.7rem;
+    }
+    
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 10px;
+        place-content: center;
+        padding: 0 40px 40px 40px;
+
+        .project{
+            aspect-ratio: 1 / 0.9;
+            display: flex;
+            flex-direction: column;
+            background: rgba(var.$light-color, 0.03);
+            cursor: pointer;
+
+            &:hover{
+                .project-name{
+                    color: var.$accent-color;
+
+                    .arrow{
+                        top: -2px;
+                        left: 5px;
+
+                        .main-line,
+                        .left-line,
+                        .right-line{
+                            background: var.$accent-color;
+                        }
+                    }
+                }
+
+                .img-wrapper::before {
+                    transform: scale(1.02);
+                }
+            }
+
+            .img-wrapper{
+                flex: 1;
+                position: relative;
+                overflow: hidden;
+                // border: 1px solid red;
+
+                // Hintergrundbild wird auf ein before element gesetzt welches dann gezoomt werden kann
+                // Dies verhindert Flimmern des Bildes das bei Hintergrundbild-Upscaling erzeugt wird
+                &::before{
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    transition: transform .5s ease;
+                    will-change: transform;
+                }
+            }
+
+            &[data-target="leitenschenke"]{
+                .img-wrapper{
+                    &::before{
+                        background-image: url("/assets/leitenschenke/main-img.png");
+                    }
+                }
+            }
+            &[data-target="beatz"]{
+                .img-wrapper{
+                    &::before{
+                        background-image: url("/assets/beatz/main-img.png");
+                    }
+                }
+            }
+            &[data-target="ticktick"]{
+                .img-wrapper{
+                    &::before{
+                        background-image: url("/assets/ticktick/main-img.png");
+                    }
+                }
+            }
+            &[data-target="cosmio"]{
+                .img-wrapper{
+                    &::before{
+                        background-image: url("/assets/cosmio/main-img.png");
+                    }
+                }
+            }
+            &[data-target="pong"]{
+                .img-wrapper{
+                    &::before{
+                        background-image: url("/assets/pong/main-img.png");
+                    }
+                }
+            }
+            &[data-target="livekick"]{
+                .img-wrapper{
+                    &::before{
+                        background-image: url("/assets/livekick/main-img.png");
+                    }
+                }
+            }
+
+            .skills{
+                margin: 20px 10px 0px 30px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                span{
+                    opacity: 0.5;
+                    display: inline-block;
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    font-size: .8rem;
+                    color: var.$accent-color;
+                    background: rgba(var.$accent-color, 0.09);
+                }
+            }
+
+            .project-name{
+                font-size: 2.5rem;
+                margin: 10px 10px 20px 30px;
+                transition: color .5s ease;
+                font-family: "Cormorant Garamond";
+            }
+        }
+    }
+}

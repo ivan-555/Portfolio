@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- JS -->
+    <script type="module" src="js/sidebar.js" defer></script>
+    <script type="module" src="js/about.js" defer></script>
+    <script type="module" src="js/spotlight.js" defer></script>
+    <script type="module" src="js/projects.js" defer></script>
+    <script type="module" src="js/project.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="spotlight" id="spotlight"></div>
+
+    <div class="sidebar">
+        <div class="profile">
+            <img src="20250425_144101.jpg" alt="Profile Picture">
+            <h1>Ivan Facchinetti</h1>
+            <h2>Frontend Entwickler</h2>
+        </div>
+        <ul class="navigation">
+            <li class="active" data-target="about">
+                <div class="rhombus">
+                    <div class="line one"></div>
+                    <div class="line two"></div>
+                    <div class="line three"></div>
+                    <div class="line four"></div>
+                </div>
+                <i class="fa-solid fa-address-card"></i>
+                Über mich
+            </li>
+            <li data-target="projects">
+                <div class="rhombus">
+                    <div class="line one"></div>
+                    <div class="line two"></div>
+                    <div class="line three"></div>
+                    <div class="line four"></div>
+                </div>
+                <i class="fa-solid fa-database"></i>
+                Projekte
+            </li>
+            <li data-target="contact">
+                <div class="rhombus">
+                    <div class="line one"></div>
+                    <div class="line two"></div>
+                    <div class="line three"></div>
+                    <div class="line four"></div>
+                </div>
+                <i class="fa-solid fa-envelope"></i>
+                Kontakt
+            </li>
+        </ul>
+        <div class="tech-stack">
+            <span>Tech Stack</span>
+            <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>Js</li>
+                <li>Scss</li>
+                <li>Git</li>
+                <li>Github</li>
+            </ul>
+        </div>
+        <div class="links">
+            <a href="https://github.com/ivan-555?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i>Mein Github</a>
+        </div>
+    </div>
+
+    <div class="window">
+        <div class="page about active">
+            <div class="slider">
+                <div class="section1">
+                    <div class="showreel">
+                        <img src="assets/750x500-1M0B2657.jpg" alt="showreel image">
+                    </div>
+                    <div class="description">
+                        <h1>Hallo, ich bin <span>Ivan</span> </h1>
+                        <span>Ein autodidaktischer <span>Frontend-Entwickler</span> aus Marling, Südtirol</span>
+                        <div class="links">
+                            <a href="https://github.com/ivan-555?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <button>Lebenslauf <i class="fa-solid fa-file-arrow-down"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section2">
+                    <div class="paragraph-wrapper">
+                        <p>Nach meinem Berufsschulabschluss begann ich in der Gastronomie als Kellner und Barista zu arbeiten. Derzeit bin ich im <a href="https://www.leitenschenke.it/" target="_blank">Restaurant Leitenschenke</a> tätig.</p>
+                    </div>
+                    <div class="paragraph-wrapper">
+                        <p>Schon früh interessierte ich mich für Computer und kreative Software: Ich bearbeitete Bilder mit Photoshop, schnitt Videos mit Premiere, experimentierte mit VFX in After Effects und folgte ersten 3D-Tutorials in Blender. Ich probierte vieles aus, lernte ständig dazu und tauchte immer tiefer in die Welt der digitalen Gestaltung ein.</p>
+                    </div>
+                    <div class="paragraph-wrapper">
+                        <p>Vor etwa zwei Jahren entdeckte ich dann meine Begeisterung fürs Programmieren. Was als Hobby begann, wurde schnell zu einem konkreten Berufswunsch. Seitdem habe ich mir die Webentwicklung mit Kursen, Tutorials und viel Eigeninitiative selbst beigebracht.</p>
+                    </div>
+                    <div class="paragraph-wrapper">
+                        <p>Inzwischen habe ich eigene Webprojekte, Spiele und Apps realisiert – darunter Cosmio, eine interaktive 3D-Webseite über das Universum, sowie LiveKick, eine Fußball-App mit Live-Daten, die über einen selbst erstellten Express-Proxy-Server von einer API abgerufen werden.</p>
+                    </div>
+                    <div class="paragraph-wrapper">
+                        <p>Was mich am Programmieren so fasziniert, ist, dass ich mit einigen Zeilen Code Konzepte und Designs zum Leben erwecken kann – funktional und visuell. Besonders spannend finde ich, wie man durch kleine Details wie Animationen und interaktive Features eine Benutzeroberfläche lebendig gestalten kann.</p>
+                    </div>
+                    <div class="paragraph-wrapper">
+                        <p>Aktuell bin ich auf der Suche nach einer Position als Junior Frontend-Entwickler, in der ich mich weiterentwickeln und mein Wissen in einem Team einbringen kann.</p>
+                    </div>
+                    <div class="paragraph-wrapper contact">
+                        <i class="fa-solid fa-envelope"></i><p>Ich freue mich über Ihre Nachricht – gerne über mein <span class="contact-form-link">Kontaktformular</span>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sections-arrow">
+                <span>Mehr über mich</span>
+                <div class="arrow">
+                    <div class="main-line"></div>
+                    <div class="left-line"></div>
+                    <div class="right-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page projects">
+            <span class="heading">Meine Projekte</span>
+            
+            <div class="grid">
+                <div class="project" data-target="leitenschenke">
+                    <div class="img-wrapper"></div>
+                    <div class="skills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>Git</span>
+                    </div>
+                    <span class="project-name">Leitenschenke</span>
+                </div>
+                <div class="project" data-target="beatz">
+                    <div class="img-wrapper"></div>
+                    <div class="skills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>Git</span>
+                    </div>
+                    <span class="project-name">Beatz</span>
+                </div>
+                <div class="project" data-target="ticktick">
+                    <div class="img-wrapper"></div>
+                    <div class="skills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>Git</span>
+                        <span>Flatpickr</span>
+                    </div>
+                    <span class="project-name">TickTick</span>
+                </div>
+                <div class="project" data-target="cosmio">
+                    <div class="img-wrapper"></div>
+                    <div class="skills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>Git</span>
+                        <span>glTF Pipeline</span>
+                        <span>Model Viewer</span>
+                        <span>PWA</span>
+                    </div>
+                    <span class="project-name">Cosmio</span>
+                </div>
+                <div class="project" data-target="pong">
+                    <div class="img-wrapper"></div>
+                    <div class="skills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>Git</span>
+                    </div>
+                    <span class="project-name">Pong</span>
+                </div>
+                <div class="project" data-target="livekick">
+                    <div class="img-wrapper"></div>
+                    <div class="skills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>Git</span>
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>Render</span>
+                        <span>PWA</span>
+                    </div>
+                    <span class="project-name">LiveKick</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="page project leitenschenke">
+            <i class="fa-solid fa-arrow-left return-btn"></i>
+            <h2>Leitenschenke</h2>
+            <h3>Projektbeschreibung</h3>
+            <p>
+                Die Webseite für das Gasthaus „Leitenschenke“ – meinem aktuellen Arbeitsplatz – war mein erstes größeres Projekt.  
+                Der Fokus lag auf einem eleganten, modernen Design, ohne die Benutzerfreundlichkeit zu vernachlässigen.  
+                Besonderen Wert habe ich auf eine intuitive Seitennavigation sowie auf die ansprechende Präsentation von Informationen zur Gastgeberfamilie, den Gerichten und den Produkten der Leitenschenke gelegt.  
+                Natürlich ist die Website vollständig responsiv und funktioniert auf Desktop- wie auch auf Mobilgeräten reibungslos.
+            </p>
+            <h3>Tech Stack</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+                <li>GitHub</li>
+            </ul>
+            <img src="assets/leitenschenke/main-img.png" class="main-img">
+            <h3 class="features">Features</h3>
+            <h4>Übersichtliche Navigation</h4>
+            <span>Sowohl auf Desktop als auch auf Mobilgeräten lässt sich die Seite übersichtlich mit Links navigieren.</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/leitenschenke/navigation-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/leitenschenke/navigation-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <h4>Schnellzugriffe</h4>
+            <span>Fixierte Shortcuts die schnellen Zugriff auf Informationen wie Öffnungszeiten, Telefonnummer und Standort bieten</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/leitenschenke/shortcuts-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/leitenschenke/shortcuts-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <h4>Bilderslider</h4>
+            <span>Moderne interaktive Bilderslider geben visuelle Einblicke über das Ambiente, das Panorama und über die Gerichte</span>
+            <div class="video-wrapper full-view">
+                <video src="assets/leitenschenke/bilderslider-1-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/leitenschenke/bilderslider-2-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/leitenschenke/bilderslider-2-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <h4>Animationen</h4>
+            <span>Sanfte, scroll Basierte Animationen der Inhalte</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/leitenschenke/scroll-animationen-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/leitenschenke/scroll-animationen-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="hosting-wrapper">
+                <h4>Hosting</h4>
+                <span>Diese Webseite wird mit GitHub Pages gehostet</span>
+                <a href="https://ivan-555.github.io/Leitenschenke/" target="_blank">Zur Webseite</a>
+            </div>
+        </div>
+
+        <div class="page project beatz">
+            <i class="fa-solid fa-arrow-left return-btn"></i>
+            <h2>Beatz</h2>
+            <h3>Projektbeschreibung</h3>
+            <p>
+                Beatz ist eine interaktive Musikplattform, auf der Nutzer Playlists durchsuchen, Songs abspielen und ihre Favoriten speichern können.  
+                Die Seite bietet ein modernes, benutzerfreundliches Interface und deckt verschiedene Musikgenres ab.  
+                Bei diesem Projekt lag mein Schwerpunkt darauf, den Umgang mit JavaScript-Objekten zu erlernen: Die Playlists und Songinformationen werden in Objekten gespeichert und dynamisch über die Benutzeroberfläche verwaltet.
+            </p>
+            <h3>Tech Stack</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+                <li>GitHub</li>
+            </ul>
+            <img src="assets/beatz/main-img.png" class="main-img">
+            <h3 class="features">Features</h3>
+            <h4>Playlists</h4>
+            <span>Nutzer können zwischen verschiedenen Musik-Genres wie Rock, EDM und Relax navigieren.</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/beatz/playlists-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/beatz/playlists-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <h4>Favoriten</h4>
+            <span>Lieblingssongs können zur Favoriten Playlist hinzugefügt werden.</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/beatz/favoriten-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/beatz/favoriten-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <h4>Musiksteuerung</h4>
+            <span>Nutzer können Songs abspielen, pausieren, stummschalten und zwischen Songs navigieren.</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/beatz/musiksteuerung-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/beatz/musiksteuerung-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <h4>Local Storage</h4>
+            <span>Die Favoriten und der zuletzt gespielte Song werden im Local Storage gespeichert, sodass diese auch beim erneuten Laden der Seite verfügbar bleiben.</span>
+            <div class="video-wrapper full-view">
+                <video src="assets/beatz/localstorage-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="hosting-wrapper">
+                <h4>Hosting</h4>
+                <span>Diese Webseite wird mit GitHub Pages gehostet</span>
+                <a href="https://ivan-555.github.io/Beatz/" target="_blank">Zur Webseite</a>
+            </div>
+        </div>
+
+        <div class="page project ticktick ">
+            <i class="fa-solid fa-arrow-left return-btn"></i>
+            <h2>TickTick</h2>
+            <h3>Projektbeschreibung</h3>
+            <p>
+                TickTick ist eine To-Do-Webseite, mit der Nutzer Aufgaben hinzufügen, als wichtig markieren und mit einem Fälligkeitsdatum versehen können.  
+                Die Aufgaben werden automatisch nach Priorität und Fälligkeit sortiert, um eine effiziente Verwaltung und bessere Übersicht zu ermöglichen.  
+                Das Projekt diente mir vor allem dazu, den Umgang mit dynamisch gerenderten Inhalten in JavaScript zu üben, den Status von Aufgaben nachzuverfolgen und das JavaScript-Date-Objekt gezielt einzusetzen.
+            </p>
+            <h3>Tech Stack</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Flatpickr</li>
+            </ul>
+            <img src="assets/ticktick/main-img.png" class="main-img">
+            <h3 class="features">Features</h3>
+            <h4>Aufgaben erstellen</h4>
+            <span>Nutzer können neue Aufgaben hinzufügen, als wichtig markieren und mit Datum versehen.</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/ticktick/notizen-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/ticktick/notizen-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <h4>Filter</h4>
+            <span>Aufgaben werden nach Fälligkeit und Wichtigkeit sortiert und können über die Navigationsleiste gefiltert werden.</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/ticktick/filter-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/ticktick/filter-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <h4>Local Storage</h4>
+            <span>Aufgaben werden im Local Storage gespeichert, sodass diese auch beim erneuten Laden der Seite verfügbar bleiben.</span>
+            <div class="video-wrapper full-view">
+                <video src="assets/ticktick/localstorage-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="hosting-wrapper">
+                <h4>Hosting</h4>
+                <span>Diese Webseite wird mit GitHub Pages gehostet</span>
+                <a href="https://ivan-555.github.io/TickTick/" target="_blank">Zur Webseite</a>
+            </div>
+        </div>
+
+        <div class="page project cosmio">
+            <i class="fa-solid fa-arrow-left return-btn"></i>
+            <h2>Cosmio</h2>
+            <h3>Projektbeschreibung</h3>
+            <p>
+                Cosmio ist eine interaktive Webseite und Progressive Web App, die es Nutzern ermöglicht, das Universum in 3D zu erkunden und Informationen über Himmelsobjekte abzurufen.  
+                Für eine beeindruckende visuelle Erfahrung kommen der Google Model Viewer sowie eingebettete Modelle über Sketchfab zum Einsatz.  
+                Die 3D-Modelle sind im glTF-Format eingebettet und mithilfe der glTF-Pipeline komprimiert, um die Ladezeit zu optimieren.  
+                Ich habe dieses Projekt gewählt, um gezielt mit 3D-Objekten im Web zu experimentieren und mein Verständnis für deren Integration, Darstellung und Optimierung zu vertiefen.
+            </p>
+            <h3>Tech Stack</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>glTF Pipeline</li>
+                <li>Model Viewer</li>
+                <li>PWA</li>
+            </ul>
+            <img src="assets/cosmio/main-img.png" class="main-img">
+            <h3 class="features">Features</h3>
+            <h4>3D Modelle</h4>
+            <span>Nutzer können realistische 3D-Modelle interaktiv erkunden.</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/cosmio/objekte-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/cosmio/objekte-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="hosting-wrapper">
+                <h4>Hosting</h4>
+                <span>Diese Webseite wird mit GitHub Pages gehostet</span>
+                <a href="https://ivan-555.github.io/Cosmio/" target="_blank">Zur Webseite</a>
+            </div>
+        </div>
+        
+        <div class="page project pong">
+            <i class="fa-solid fa-arrow-left return-btn"></i>
+            <h2>Pong</h2>
+            <h3>Projektbeschreibung</h3>
+            <p>
+                Dieses Pong-Spiel ist eine moderne Umsetzung des klassischen Arcade-Games.  
+                Es bietet sowohl einen Einzelspielermodus gegen eine KI als auch einen lokalen Mehrspielermodus.  
+                Im Einzelspielermodus kann man zwischen drei Schwierigkeitsstufen wählen, welche die Fehlerquote der KI beeinflussen. Ziel des Spiels ist es, den Ball am Gegner vorbeizuspielen und als Erster fünf Punkte zu erreichen.  
+                Ich habe dieses Projekt gewählt, um den Umgang mit dem HTML-Canvas, die Verwendung von <code>requestAnimationFrame</code> sowie die Implementierung von Tastatur-Eventlistenern zu erlernen.  
+                Das Spiel ist nicht für mobile Geräte geeignet, passt sich aber auf Desktop-Computern und Laptops flexibel an verschiedene Bildschirmgrößen an. Die Spielgeschwindigkeit bleibt unabhängig von der Framerate konstant.
+            </p>
+            <h3>Tech Stack</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+                <li>GitHub</li>
+            </ul>
+            <div class="video-wrapper full-view">
+                <video src="assets/pong/gameplay-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="hosting-wrapper">
+                <h4>Hosting</h4>
+                <span>Diese Webseite wird mit GitHub Pages gehostet</span>
+                <a href="https://ivan-555.github.io/Pong/" target="_blank">Zur Webseite</a>
+            </div>
+        </div>
+
+        <div class="page project livekick">
+            <i class="fa-solid fa-arrow-left return-btn"></i>
+            <h2>LiveKick</h2>
+            <h3>Projektbeschreibung</h3>
+            <p>
+                LiveKick ist mein bisher umfangreichstes und technisch anspruchsvollstes Projekt – und zugleich mein erstes mit Backend-Anbindung.  
+                Es handelt sich um eine Fußball-Webseite und Progressive Web App, die über einen selbst entwickelten Express-Server Daten aus den APIs von <em>football-data.org</em> und <em>TheSportsDB</em> abruft und im Frontend dynamisch rendert.  
+                Angezeigt werden aktuelle Spielstände und Tabellen aus sechs großen Ligen: Serie A, Bundesliga, La Liga, Premier League, Ligue 1 und der Champions League.  
+                Die Seite aktualisiert sich automatisch jede Minute, um möglichst aktuelle Ergebnisse bereitzustellen. Aufgrund der Einschränkungen der kostenlosen API-Tarife können dabei Verzögerungen von bis zu fünf Minuten auftreten.
+                Ich habe dieses Projekt gewählt, um gezielt den Umgang mit API-Fetch-Requests, die Einrichtung eines Express-Proxy-Servers sowie das dynamische Rendern und Sortieren externer Daten im Frontend zu erlernen. Dabei lag mein Fokus auf der strukturierten Darstellung der Spiele nach Liga, Datum und Uhrzeit – in einer möglichst performanten und benutzerfreundlichen Oberfläche.
+            </p>
+            <h3>Tech Stack</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Render</li>
+                <li>PWA</li>
+            </ul>
+            <img src="assets/livekick/main-img.png" class="main-img">
+            <h3 class="features">Features</h3>
+            <h4>Express Proxy Server</h4>
+            <span>
+                Um Spiel- und Tabellendaten ohne CORS-Einschränkungen abrufen zu können und die Fetch-Limits der APIs einzuhalten, habe ich einen kleinen Express-Server entwickelt.  
+                Dieser ruft die Daten von den externen APIs ab, speichert sie zwischengespeichert im Cache und stellt sie über definierte GET-Endpunkte für das Frontend bereit.  
+                So wird sichergestellt, dass die Daten regelmäßig – einmal pro Minute – aktualisiert werden, ohne das Request-Limit der externen Anbieter zu überschreiten.  
+                Beliebig viele Nutzer können diese Daten dann vom Server abrufen, ohne selbst Requests an die API zu senden.
+            </span>
+            <h4>Ligen</h4>
+            <span>Nutzer können zwischen verschiedenen Ligen wechseln und jeweils die aktuellen Spiele sowie Tabellen abrufen.</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/livekick/ligen-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/livekick/ligen-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <h4>Favoriten</h4>
+            <span>Nutzer können Spiele zu den Favoriten hinzufügen, welche im Local Storage gespeichert bleiben.</span>
+            <div class="video-wrapper desktop-view">
+                <video src="assets/livekick/favoriten-desktop.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="video-wrapper mobile-view">
+                <video src="assets/livekick/favoriten-mobile.mp4" loop muted playsinline></video>
+                <div class="play-overlay">
+                    <i class="fa-solid fa-play active"></i>
+                </div>
+            </div>
+            <div class="hosting-wrapper">
+                <h4>Hosting</h4>
+                <span>Diese Webseite wird mit GitHub Pages gehostet</span>
+                <a href="https://ivan-555.github.io/LiveKick/" target="_blank">Zur Webseite</a>
+            </div>
+        </div>
+
+        <div class="page contact">
+            <h1>Senden Sie mir eine Email</h1>
+            <form action="https://getform.io/f/bkkymemb" method="POST" id="contactForm">
+                <input type="text" name="Name" placeholder="Name" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <textarea name="Message" placeholder="Nachricht" required></textarea>
+                <button type="submit">Absenden</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

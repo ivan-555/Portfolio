@@ -1,0 +1,274 @@
+@use "variables" as var;
+
+.page.about{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .slider{
+        transition: transform .8s ease;
+
+        .section1{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        
+            .showreel{
+                height: 400px;
+                width: 500px;
+                background: rgba(var.$light-color, 0.1);
+                border-radius: 10px;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+            }
+
+            .description{
+                h1{
+                    font-size: 3.3rem;
+
+                    span{
+                        font-size: inherit;
+                        color: var.$accent-color;
+                        font-weight: 600;
+                    }
+                }
+
+                span{
+                    font-size: 1.3rem;
+
+                    span{
+                        color: var.$accent-color;
+                    }
+                }
+
+                .links{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-top: 20px;
+
+                    a{
+                        border: 1px solid var.$accent-color;
+                        border-radius: 50%;
+                        font-size: 1rem;
+                        height: 35px;
+                        width: 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        position: relative;
+                        z-index: 2;
+                        
+                        i{
+                            transition: all .5s ease;
+                        }
+                        
+                        &:hover{
+                            i{
+                                color: var.$accent-color;
+                            }
+                        }
+                    }
+
+                    button{
+                        width: fit-content;
+                        background: none;
+                        color: var.$font-color;
+                        border-radius: 50px;
+                        border: 1px solid var.$accent-color;
+                        padding: 10px 30px;
+                        font-weight: 500;
+                        transition: all .5s ease;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        i{
+                            transition: all .5s ease;
+                            font-size: 1rem;
+                        }
+
+                        &:hover{
+                            color: var.$accent-color;
+
+                            i{
+                                color: var.$accent-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .section2{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            padding: 300px;
+
+            .paragraph-wrapper{
+                position: relative;
+
+                p{
+                    font-size: 1.3rem;
+
+                    a, span{
+                        color: var.$accent-color;
+                        cursor: pointer;
+                        opacity: 0.8;
+                        transition: all .5s ease;
+
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &.contact{
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+
+    .sections-arrow{
+        position: absolute;
+        right: 0px;
+        bottom: 100px;
+        transform: rotate(-90deg); // default rotation
+        cursor: pointer;
+
+        &:hover{
+            span{
+                color: var.$accent-color;
+            }
+
+            .arrow{
+                .main-line,
+                .left-line,
+                .right-line{
+                    background: var.$accent-color;
+                }
+            }
+        }
+
+        &.animate-down{
+            animation: swipeArrowDown .8s ease;
+        }
+
+        &.animate-up{
+            animation: swipeArrowUp .8s ease;
+        }
+
+        // Klass to keep the rotation value of the end of the swipeArrowDown Animation
+        // Cant use forwards because you need to remove the animation after play in js
+        // because sidebar links would retrigger animation when a page becomes visible by display
+        &.rotated{
+            transform: translateY(0) rotate(90deg);
+            opacity: 1;
+        }
+
+        span{
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            font-size: .95rem;
+            transition: all .5s ease;
+        }
+
+        .arrow{
+            height: 100px;
+            width: 200px;
+            position: relative;
+
+            .main-line,
+            .left-line,
+            .right-line{
+                background: white;
+                transition: all .5s ease;
+            }
+
+            .main-line{
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .left-line{
+                height: 2px;
+                width: 50px;
+                position: absolute;
+                top: 38%;
+                transform: rotate(-25deg); 
+            }
+            
+            .right-line{
+                height: 2px;
+                width: 50px;
+                position: absolute;
+                bottom: 38%;
+                transform: rotate(25deg); 
+            }
+        }
+    }
+}
+
+@keyframes swipeArrowDown {
+  0% {
+    transform: translateY(0) rotate(-90deg);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateY(50px) rotate(-90deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateY(0px) rotate(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);
+    opacity: 1;
+  }
+}
+
+@keyframes swipeArrowUp{
+    0% {
+        transform: translateY(0) rotate(90deg);
+        opacity: 1;
+    }
+
+    40% {
+        transform: translateY(-50px) rotate(90deg);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(0px) rotate(-90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) rotate(-90deg);
+        opacity: 1;
+    }
+}
+

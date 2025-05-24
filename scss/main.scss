@@ -1,0 +1,84 @@
+@use "variables" as var;
+@use "sidebar";
+@use "page-projects";
+@use "page-contact";
+@use "page-about";
+@use "page-project";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var.$font-color;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    h1{
+        font-family: "Cormorant Garamond";
+    }
+    h2{
+        font-family: "Cormorant Garamond";
+    }
+    h3{
+        font-family: "Cormorant Garamond";
+    }
+
+    // Spotlight
+    .spotlight{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        background: radial-gradient(rgba(var.$accent-color, 0.05), transparent, transparent);
+        width: 900px;
+        height: 900px;
+    }
+
+    .window{
+        flex: 1;
+        background: var.$dark-color;
+
+        .page{
+            display: none;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: none;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: rgba(var.$accent-color, 0.8);
+            }
+            
+            &::-webkit-scrollbar-thumb:hover {
+                background: var.$accent-color;
+            }
+
+            &.active{
+                display: block;
+            }
+
+            &.contact.active{
+                display: flex;
+            }
+        }
+    }
+}
+
+@-moz-document url-prefix() {
+    .window .page {
+        scrollbar-width: thin;
+        scrollbar-color: #555 none;
+    }
+}
