@@ -13,6 +13,14 @@
     font-family: "Inter", sans-serif;
     text-decoration: none;
     list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(var.$accent-color, 0.8) transparent;
+}
+
+html{
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
 }
 
 body{
@@ -49,22 +57,6 @@ body{
         .page{
             display: none;
 
-            &::-webkit-scrollbar {
-                width: 6px;
-            }
-
-            &::-webkit-scrollbar-track {
-                background: none;
-            }
-            
-            &::-webkit-scrollbar-thumb {
-                background: rgba(var.$accent-color, 0.8);
-            }
-            
-            &::-webkit-scrollbar-thumb:hover {
-                background: var.$accent-color;
-            }
-
             &.active{
                 display: block;
             }
@@ -73,12 +65,5 @@ body{
                 display: flex;
             }
         }
-    }
-}
-
-@-moz-document url-prefix() {
-    .window .page {
-        scrollbar-width: thin;
-        scrollbar-color: #555 none;
     }
 }
