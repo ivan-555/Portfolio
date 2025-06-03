@@ -12,6 +12,7 @@
     <script type="module" src="js/spotlight.js" defer></script>
     <script type="module" src="js/projects.js" defer></script>
     <script type="module" src="js/project.js" defer></script>
+    <script type="module" src="js/preloader.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +23,16 @@
     <link rel="icon" href="assets/Favicon.png" type="image/png">
 </head>
 <body>
+    <div id="preloader">
+        <div class="loader">
+            <div class="square-1 square"></div>
+            <div class="square-2 square"></div>
+        </div>
+        <div id="console">
+            <div id="console-output"><span id="console-cursor">|</span></div>
+        </div>
+    </div>
+
     <div class="spotlight" id="spotlight"></div>
 
     <div class="sidebar">
@@ -84,7 +95,7 @@
     </div>
 
     <div class="window">
-        <div class="page about ">
+        <div class="page about active">
             <div class="slider">
                 <div class="section1">
                     <div class="wrapper">
@@ -199,7 +210,7 @@
             </div>
         </div>
 
-        <div class="page project leitenschenke active">
+        <div class="page project leitenschenke">
             <i class="fa-solid fa-arrow-left return-btn"></i>
             <h2>Leitenschenke</h2>
             <h3>Projektbeschreibung</h3>
