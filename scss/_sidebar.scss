@@ -7,8 +7,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
-    padding: 70px 0 50px 0;
+    height: 100svh;
+    padding: 75px 0 50px 0;
 
     .hamburger{
         display: none;
@@ -19,14 +19,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
-        img{
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            display: none;
-        }
 
         h1{
             font-family: "Cormorant Garamond";
@@ -254,8 +246,67 @@
     }
 }
 
-@media (max-height: 700px) {
+@media (max-width: 500px) {
+    .sidebar{
+        .profile{
+            h1{
+                font-size: 1.7rem;
+            }
+            h2{
+                font-size: 1.1rem;
+            }
+        }
+
+        ul.navigation{
+            gap: 25px;
+
+            li{
+                font-size: 1rem;
+
+                .rhombus{
+                    width: 12px;
+                    height: 12px;
+
+                    .line{
+                        height: 7px;
+                    }
+                }
+            }
+        }
+
+        .tech-stack{
+            span{
+                font-size: 1rem;
+            }
+
+            ul{
+                li{
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        .links{
+            a{
+                font-size: .7rem;
+
+                i{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 650px) {
     .sidebar{
         padding-bottom: 35px;
+    }
+}
+
+@media (max-height: 600px) {
+    .sidebar{
+        padding-bottom: 30px;
+        padding-top: 60px;
     }
 }

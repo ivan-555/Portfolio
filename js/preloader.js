@@ -1,7 +1,7 @@
 const lines = [
   'Ressourcen werden geladen',
   'HTML und CSS werden geparst',
-  'DOM und CSSOM Tree werden aufgebaut',
+  'DOM-CSSOM Tree werden aufgebaut',
   'Render-Tree wird berechnet',
   'Rasterisierung',
   'JavaScript wird geparst',

@@ -80,3 +80,13 @@
     pointer-events: none;
   }
 }
+
+@media (max-width: 500px) {
+  #preloader{
+    #console{
+      #console-output{
+        font-size: .9rem;
+      }
+    }
+  }
+}

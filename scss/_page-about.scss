@@ -1,7 +1,7 @@
 @use "variables" as var;
 
 .page.about{
-    height: 100vh;
+    height: 100svh;
     position: relative;
     overflow: hidden;
 
@@ -9,9 +9,10 @@
         transition: transform .8s ease;
 
         .section1{
-            height: 100vh;
+            height: 100svh;
             position: relative;
             padding: 50px;
+            padding-top: 50px !important;
             padding-bottom: 120px !important;
             display: flex;
             align-items: center;
@@ -25,16 +26,16 @@
 
                 .profile-picture{
                     height: 420px;
-                    max-height: 80vh;
+                    max-height: 80svh;
                     width: 370px;
                     background: rgba(var.$light-color, 0.08);
-                    border-radius: 10px;
+                    border-radius: 5px;
                     justify-self: end;
                     
                     img{
                         width: 100%;
                         height: 100%;
-                        border-radius: 10px;
+                        border-radius: 5px;
                     }
                 }
 
@@ -142,7 +143,7 @@
         }
 
         .section2{
-            height: 100vh;
+            height: 100svh;
             padding: 0 200px;
             padding-top: 150px !important;
             padding-bottom: 50px !important;
@@ -153,7 +154,7 @@
             gap: 50px;
 
             h3{
-                font-size: 4rem;
+                font-size: 2.7rem;
                 text-align: center;
             }
 
@@ -198,27 +199,18 @@
 // ------------- Media Querys --------------
 
 // ----- Section 1 --------
-@media (max-width: 1550px) {
+@media (max-width: 1500px) {
     .page.about{
         .slider{
             .section1{
                 .wrapper{
                     flex-direction: column;
+                    gap: 35px;
 
                     .profile-picture{
-                        max-height: 50vh;
+                        max-height: 50svh;
                     }
-                }
-            }
-        }
-    }
-}
 
-@media (max-width: 750px) {
-    .page.about{
-        .slider{
-            .section1{
-                .wrapper{
                     .description{
                         h1{
                             font-size: 3rem;
@@ -234,7 +226,7 @@
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     .page.about{
         .slider{
             .section1{
@@ -275,12 +267,15 @@
         .slider{
             .section1{
                 padding: 10px;
-                padding-top: 100px !important;
             
                 .wrapper{
                     gap: 20px;
 
                     .description{
+                        h1{
+                            font-size: 2.6rem;
+                        }
+                        
                         span{
                             br{
                                 display: block;
@@ -293,7 +288,18 @@
     }
 }
 
-@media (max-width: 480px) {
+// Intersection with Hamburger Icon -> add top space
+@media (max-width: 490px) {
+    .page.about{
+        .slider{
+            .section1{
+                padding-top: 80px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
     .page.about{
         .slider{
             .section1{
@@ -301,13 +307,7 @@
 
                 .wrapper{
                     .profile-picture{
-                        width: 90vw;
-                    }
-
-                    .description{
-                        h1{
-                            font-size: 2.6rem;
-                        }
+                        width: 85vw;
                     }
                 }
             }
@@ -368,10 +368,6 @@
         .slider{
             .section2{
                 padding: 150px;
-
-                h3{
-                    font-size: 3.7rem;
-                }
             }
         }
     }
@@ -382,10 +378,6 @@
         .slider{
             .section2{
                 padding: 100px;
-
-                h3{
-                    font-size: 3.3rem;
-                }
             }
         }
     }
@@ -396,34 +388,6 @@
         .slider{
             .section2{
                 padding: 50px;
-
-                h3{
-                    font-size: 3rem;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1200px) {
-    .page.about{
-        .slider{
-            .section2{
-                h3{
-                    font-size: 2.7rem;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 700px) {
-    .page.about{
-        .slider{
-            .section2{
-                h3{
-                    font-size: 2.3rem;
-                }
 
                 .wrapper{
                     .paragraph-wrapper{
@@ -437,11 +401,22 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
     .page.about{
         .slider{
             .section2{
-                padding: 20px;
+                h3{
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .page.about{
+        .slider{
+            .section2{
                 gap: 30px;
 
                 h3{
@@ -452,6 +427,28 @@
                     .paragraph-wrapper{
                         p{
                             font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .page.about{
+        .slider{
+            .section2{
+                padding: 20px;
+
+                h3{
+                    font-size: 1.85rem;
+                }
+
+                .wrapper{
+                    .paragraph-wrapper{
+                        p{
+                            font-size: 1rem;
                         }
                     }
                 }
@@ -497,14 +494,14 @@
     }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 400px) {
     .page.about{
         .slider{
             .section2{
                 padding: 10px;
 
                 h3{
-                    font-size: 1.3rem;
+                    font-size: 1.4rem;
                 }
 
                 .wrapper{
@@ -517,9 +514,29 @@
     }
 }
 
+@media (max-width: 350px) {
+    .page.about{
+        .slider{
+            .section2{
+                padding: 7px;
+
+                h3{
+                    font-size: 1.3rem;
+                }
+
+                .wrapper{
+                    .paragraph-wrapper{
+                        padding: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 // --------- Height Querys ---------
-@media (max-width: 1550px) and (max-height: 800px) {
+@media (max-width: 1500px) and (max-height: 850px) {
     .page.about{
         .slider{
             .section1{
@@ -528,7 +545,7 @@
                 }
 
                 .section-switch-button{
-                    bottom: 30px;
+                    bottom: 35px;
                 }
             }
 
@@ -539,7 +556,7 @@
     }
 }
 
-@media (max-width: 570px) and (max-height: 900px) {
+@media (max-width: 570px) and (max-height: 850px) {
     .page.about{
         .slider{
             .section1{
@@ -548,7 +565,49 @@
                 }
 
                 .section-switch-button{
-                    bottom: 20px;
+                    bottom: 35px;
+                }
+            }
+
+            .section2{
+                padding-top: 100px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 570px) and (max-height: 780px) {
+    .page.about{
+        .slider{
+            .section1{
+                .wrapper{
+                    gap: 15px;
+                }
+
+                .section-switch-button{
+                    bottom: 30px;
+                    font-size: 1rem;
+                }
+            }
+
+            .section2{
+                padding-top: 100px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 570px) and (max-height: 700px) {
+    .page.about{
+        .slider{
+            .section1{
+                .wrapper{
+                    gap: 15px;
+                }
+
+                .section-switch-button{
+                    bottom: 23px;
+                    font-size: .95rem;
                 }
             }
 

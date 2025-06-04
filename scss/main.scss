@@ -1,3 +1,5 @@
+// Media Limit for this page's responsiveness: height: >650 width: >350
+
 @use "variables" as var;
 @use "sidebar";
 @use "page-projects";
@@ -21,7 +23,7 @@
 
 html{
     overflow: hidden;
-    height: 100vh;
+    height: 100svh;
     width: 100%;
 }
 
