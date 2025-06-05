@@ -1,13 +1,15 @@
 @use "variables" as var;
+@use "animations";
 
 .page.projects{
     height: 100svh;
     overflow-y: scroll;
 
     .heading{
-        display: block;
+        display: inline-block;
         padding: 40px;
         font-size: 1.7rem;
+        opacity: 0;
     }
     
     .grid{
@@ -22,6 +24,7 @@
             flex-direction: column;
             background: rgba(var.$light-color, 0.03);
             cursor: pointer;
+            opacity: 0;
 
             &:hover{
                 .project-name{
@@ -68,42 +71,42 @@
             &[data-target="leitenschenke"]{
                 .img-wrapper{
                     &::before{
-                        background-image: url("/assets/leitenschenke/main-img.png");
+                        background-image: url("../assets/leitenschenke/main-img.png");
                     }
                 }
             }
             &[data-target="beatz"]{
                 .img-wrapper{
                     &::before{
-                        background-image: url("/assets/beatz/main-img.png");
+                        background-image: url("../assets/beatz/main-img.png");
                     }
                 }
             }
             &[data-target="ticktick"]{
                 .img-wrapper{
                     &::before{
-                        background-image: url("/assets/ticktick/main-img.png");
+                        background-image: url("../assets/ticktick/main-img.png");
                     }
                 }
             }
             &[data-target="cosmio"]{
                 .img-wrapper{
                     &::before{
-                        background-image: url("/assets/cosmio/main-img.png");
+                        background-image: url("../assets/cosmio/main-img.png");
                     }
                 }
             }
             &[data-target="pong"]{
                 .img-wrapper{
                     &::before{
-                        background-image: url("/assets/pong/main-img.png");
+                        background-image: url("../assets/pong/main-img.png");
                     }
                 }
             }
             &[data-target="livekick"]{
                 .img-wrapper{
                     &::before{
-                        background-image: url("/assets/livekick/main-img.png");
+                        background-image: url("../assets/livekick/main-img.png");
                     }
                 }
             }
@@ -135,6 +138,52 @@
         }
     }
 }
+
+
+
+
+
+// Animations
+.page.projects{
+    .heading{
+        animation: fadeIn .5s ease forwards;
+        animation-delay: .2s;
+    }
+
+    .grid{
+        .project{
+            &:nth-child(1){
+                animation: zoomIn .5s ease forwards;
+                animation-delay: .2s;
+            }
+            &:nth-child(2){
+                animation: zoomIn .5s ease forwards;
+                animation-delay: .3s;
+            }
+            &:nth-child(3){
+                animation: zoomIn .5s ease forwards;
+                animation-delay: .4s;
+            }
+            &:nth-child(4){
+                animation: zoomIn .5s ease forwards;
+                animation-delay: .5s;
+            }
+            &:nth-child(5){
+                animation: zoomIn .5s ease forwards;
+                animation-delay: .6s;
+            }
+            &:nth-child(6){
+                animation: zoomIn .5s ease forwards;
+                animation-delay: .7s;
+            }
+        }
+    }
+}
+
+
+
+
+
 
 // Media Querys
 @media (max-width: 1465px) {

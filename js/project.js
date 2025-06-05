@@ -104,3 +104,32 @@ export function syncPerProject() {
 
 window.addEventListener("load", syncPerProject);
 window.addEventListener("resize", syncPerProject);
+
+
+
+
+// Intersection Observer
+document.addEventListener("DOMContentLoaded", () => {
+  const observedElements = document.querySelectorAll(".observed");
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2 // 10 % of the element
+  };
+
+  const observerCallback = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  observedElements.forEach(elem => {
+    observer.observe(elem);
+  });
+});
+

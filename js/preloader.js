@@ -96,5 +96,10 @@ function typeWelcomeLine() {
 function finishPreloader() {
   setTimeout(() => {
     preloader.classList.add('hidden');
+    const landingPage = document.querySelector(".page.about");
+    const sidebar = document.querySelector(".sidebar");
+
+    landingPage.classList.add("active");
+    sidebar.style.display = "flex";
   }, 500);
 }

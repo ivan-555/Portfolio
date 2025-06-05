@@ -9,6 +9,7 @@
     justify-content: space-between;
     height: 100svh;
     padding: 75px 0 50px 0;
+    display: none;
 
     .hamburger{
         display: none;
@@ -23,12 +24,13 @@
         h1{
             font-family: "Cormorant Garamond";
             font-size: 2rem;
+            opacity: 0;
         }
 
         h2{
             font-family: "Cormorant Garamond";
             font-size: 1.2rem;
-            opacity: 0.7;
+            opacity: 0;
         }
     }
 
@@ -36,7 +38,6 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        // padding-top: 10vh;
         gap: 30px;
 
         li{
@@ -45,9 +46,10 @@
             gap: 13px;
             font-size: 1.1rem;
             cursor: pointer;
-            opacity: 0.8;
-            transition: all .5s ease;
-            
+            transition: all .5s ease !important;
+            pointer-events: none;
+            opacity: 0;
+
             i{
                 color: inherit;
                 transition: all .5s ease;
@@ -55,12 +57,10 @@
             
             &:hover{
                 color: var.$accent-color;
-                opacity: 0.9;
             }
             
             &.active{
                 color: var.$accent-color;
-                opacity: 1;
                 scale: 1.01;
                 transform: translateX(4px);
             }
@@ -127,6 +127,7 @@
 
         span{
             font-size: 1.15rem;
+            opacity: 0;
         }
 
         ul{
@@ -141,6 +142,7 @@
                 font-size: .95rem;
                 color: var.$accent-color;
                 background: rgba(var.$accent-color, 0.05);
+                opacity: 0;
             }
         }
     }
@@ -154,6 +156,7 @@
             text-decoration: none;
             font-size: .8rem;
             transition: all .5s ease;
+            opacity: 0;
             
             i{
                 font-size: 1.5rem;
@@ -167,6 +170,162 @@
         }
     }
 }
+
+
+// Animations
+@media (min-width: 1100px) {
+    .sidebar{
+        .profile{
+            h1{
+                animation: fadeIn .5s forwards ease;
+                animation-delay: 2s;
+            }
+
+            h2{
+                animation: fadeInLight .5s forwards ease;
+                animation-delay: 2.2s;
+            }
+        }
+
+        ul.navigation{
+            li{
+                &:nth-child(1){
+                    animation: fadeIn .5s forwards ease;
+                    animation-delay: 2.4s;
+                }
+                &:nth-child(2){
+                    animation: fadeIn .5s forwards ease;
+                    animation-delay: 2.6s;
+                }
+                &:nth-child(3){
+                    animation: fadeIn .5s forwards ease;
+                    animation-delay: 2.8s;
+                }
+            }
+        }
+
+        .tech-stack{
+            span{
+                animation: fadeIn .5s forwards ease;
+                animation-delay: 3s;
+            }
+
+            ul{
+                li{
+                    &:nth-child(1){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 3.2s;
+                    }
+                    &:nth-child(2){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 3.3s;
+                    }
+                    &:nth-child(3){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 3.4s;
+                    }
+                    &:nth-child(4){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 3.5s;
+                    }
+                    &:nth-child(5){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 3.6s;
+                    }
+                    &:nth-child(6){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 3.7s;
+                    }
+                }
+            }
+        }
+
+        .links{
+            a{
+                animation: fadeIn .5s forwards ease;
+                animation-delay: 3.9s;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .sidebar.initial-open{
+        .profile{
+            h1{
+                animation: fadeIn .5s forwards ease;
+                animation-delay: .2s;
+            }
+
+            h2{
+                animation: fadeInLight .5s forwards ease;
+                animation-delay: .4s;
+            }
+        }
+
+        ul.navigation{
+            li{
+                &:nth-child(1){
+                    animation: fadeIn .5s forwards ease;
+                    animation-delay: .6s;
+                }
+                &:nth-child(2){
+                    animation: fadeIn .5s forwards ease;
+                    animation-delay: .8s;
+                }
+                &:nth-child(3){
+                    animation: fadeIn .5s forwards ease;
+                    animation-delay: 1s;
+                }
+            }
+        }
+
+        .tech-stack{
+            span{
+                animation: fadeIn .5s forwards ease;
+                animation-delay: 1.2s;
+            }
+
+            ul{
+                li{
+                    &:nth-child(1){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 1.3s;
+                    }
+                    &:nth-child(2){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 1.4s;
+                    }
+                    &:nth-child(3){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 1.5s;
+                    }
+                    &:nth-child(4){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 1.6s;
+                    }
+                    &:nth-child(5){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 1.7s;
+                    }
+                    &:nth-child(6){
+                        animation: fadeIn .5s forwards ease;
+                        animation-delay: 1.8s;
+                    }
+                }
+            }
+        }
+
+        .links{
+            a{
+                animation: fadeIn .5s forwards ease;
+                animation-delay: 2s;
+            }
+        }
+    }
+}
+
 
 
 
@@ -190,6 +349,11 @@
             flex-direction: column;
             justify-content: space-between;
             transition: all .5s ease;
+            pointer-events: none;
+            // Animation
+            animation: fadeIn .5s ease forwards;
+            animation-delay: 1.5s;
+            opacity: 0;
 
             &::before{
                 content: "";

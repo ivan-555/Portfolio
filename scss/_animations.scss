@@ -1,0 +1,67 @@
+@keyframes shrinkIn{
+    0%{
+        scale: 1.2;
+        opacity: 0;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+@keyframes zoomIn{
+    0%{
+        scale: 0.5;
+        opacity: 0;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+@keyframes swipeInBottom {
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+@keyframes fadeInLight {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.7;
+        pointer-events: all;
+    }
+}
+
+@keyframes swipeInRight {
+    0%{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+        pointer-events: all;
+    }
+}

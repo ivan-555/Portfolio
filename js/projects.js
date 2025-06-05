@@ -9,6 +9,10 @@ projectSelectors.forEach(projectSelector => {
   projectSelector.addEventListener("click", () => {
     allPages.forEach(page => {
       page.classList.remove("active");
+      // Reset observed elements
+      page.querySelectorAll(".observed").forEach(element => {
+        element.classList.remove("in-view")
+      });
       if (page.classList.contains(dataTarget)) {
         page.classList.add("active");
       }
