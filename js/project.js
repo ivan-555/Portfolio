@@ -77,6 +77,7 @@ document.addEventListener("click", e => {
 // Sync all Project Pages Videos
 // Set Mobile View Video Height to same as Desktop Video Height
 // Set Full View Video Width to same as Desktop + Mobile Video Width
+// Function gets called on project selector click in projects.js
 const projectPages = document.querySelectorAll(".page.project");
 export function syncPerProject() {
   projectPages.forEach(section => {
@@ -108,28 +109,52 @@ window.addEventListener("resize", syncPerProject);
 
 
 
-// Intersection Observer
-document.addEventListener("DOMContentLoaded", () => {
-  const observedElements = document.querySelectorAll(".observed");
 
+
+//  Initiates all page animations
+// Function gets called on project selector click in projects.js
+export function initPageAnimations(projectPage) {
+  const animItems = projectPage.querySelectorAll(".anim-item");
+  if (animItems.length === 0) return;
+
+  const initiallyVisible = [];
+  const initiallyHidden  = [];
+
+  animItems.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    // Check if element is initialy in viewport
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      initiallyVisible.push(el);
+    } else {
+      initiallyHidden.push(el);
+    }
+  });
+
+  // Staggered animation delay for initialy visible elements
+  const STEP_DELAY = 0.2; // 200ms Steps
+  initiallyVisible.forEach((el, index) => {
+    const delay = index * STEP_DELAY;
+    el.style.animationDelay = `${delay}s`;
+    el.classList.add("in-view");
+  });
+
+  // Intersection Observer for all initially hidden elements
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.2 // 10 % of the element
+    threshold: 0.1
   };
 
-  const observerCallback = (entries) => {
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        // If scrolled into view -> animate
+        entry.target.style.animationDelay = ".1s";
         entry.target.classList.add("in-view");
+        obs.unobserve(entry.target); // after animation unobserve the element to not retrigger scroll into view
       }
     });
-  };
+  }, observerOptions);
 
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-  observedElements.forEach(elem => {
-    observer.observe(elem);
-  });
-});
-
+  initiallyHidden.forEach(el => observer.observe(el));
+}

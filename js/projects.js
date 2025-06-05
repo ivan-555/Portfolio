@@ -1,7 +1,8 @@
-import { syncPerProject } from "./project.js";
+// Project slector click logic -> show project page + sync videos + init page animations
+import { syncPerProject, initPageAnimations } from "./project.js";
 
-const allPages = document.querySelectorAll(".page")
-const projectSelectors = document.querySelectorAll(".page.projects .project")
+const allPages = document.querySelectorAll(".page");
+const projectSelectors = document.querySelectorAll(".page.projects .project");
 
 projectSelectors.forEach(projectSelector => {
   const dataTarget = projectSelector.dataset.target;
@@ -9,16 +10,21 @@ projectSelectors.forEach(projectSelector => {
   projectSelector.addEventListener("click", () => {
     allPages.forEach(page => {
       page.classList.remove("active");
-      // Reset observed elements
-      page.querySelectorAll(".observed").forEach(element => {
-        element.classList.remove("in-view")
+      // Reset all project pages animations to replay them on next view
+      page.querySelectorAll(".anim-item.in-view").forEach(el => {
+        el.classList.remove("in-view");
+        el.style.animationDelay = "";
       });
-      if (page.classList.contains(dataTarget)) {
-        page.classList.add("active");
-      }
     });
 
-    // After showing page sync video sizes
-    syncPerProject();
+    // View corrisponding page
+    const targetPage = document.querySelector(`.page.project.${dataTarget}`);
+    if (targetPage) {
+      targetPage.classList.add("active");
+      // Trigger animations
+      initPageAnimations(targetPage);
+      // Sync Videos
+      syncPerProject();
+    }
   });
 });

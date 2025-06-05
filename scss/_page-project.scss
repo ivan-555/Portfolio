@@ -23,13 +23,11 @@
 
     h2{
         font-size: 3.8rem;
-        opacity: 0;
     }
 
     h3{
         font-size: 2rem;
         margin-top: 30px;
-        opacity: 0;
     }
 
     p{
@@ -37,7 +35,6 @@
         margin-top: 10px;
         margin-bottom: 30px;
         width: 80%;
-        opacity: 0;
     }
 
     ul{
@@ -54,7 +51,6 @@
             font-size: 1rem;
             color: var.$accent-color;
             background: rgba(var.$accent-color, 0.09);
-            opacity: 0;
         }
     }
 
@@ -138,14 +134,14 @@
                 transition: all .5s ease;
 
                 &.active{
-                    opacity: 0.7; // inital status
+                    opacity: 0.8; // inital status
                 }
             }
         }
 
         // &:hover{
         //     .play-overlay{
-        //         opacity: 0;
+        //         opacity: 0; -> set in js
         //     }
         // }
     }
@@ -198,64 +194,22 @@
 
 // Animations
 .page.project{
+    // manual animation
     .return-btn{
         animation: swipeInRight 1s ease forwards;
         animation-delay: .5s;
-    }
-
-    h2{
-        animation: fadeIn 1s ease forwards;
-        animation-delay: .2s;
-    }
-
-    h3.projektbeschreibung{
-        animation: fadeIn 1s ease forwards;
-        animation-delay: .4s;
-    }
-
-    p{
-        animation: fadeIn 1s ease forwards;
-        animation-delay: .6s;
-    }
-
-    h3.tech-stack{
-        animation: fadeIn 1s ease forwards;
-        animation-delay: .8s;
-    }
-
-    ul {
-        li {
-            @for $i from 1 through 20 {
-                &:nth-child(#{$i}) {
-                    animation: fadeIn 1s ease forwards;
-                    animation-delay: #{1 + ($i - 1)*0.1}s;
-                }
-            }
-        }
-    }
-
-    .main-img{
-        animation: fadeIn 1s ease forwards;
-        animation-delay: 1.4s;
-    }
-
-    &.pong{
-        .video-wrapper.full-view{
-            animation: fadeIn 1s ease forwards;
-            animation-delay: 1.4s;
-            opacity: 0;
-        }
-    }
-
-    .observed{
         opacity: 0;
+    }
 
-        &.in-view{
-            animation: fadeIn 1s ease forwards;
-        }
+    // anim-item's get animation-delay trough js
+    // initialy visible items get staggered anim delay and hidden elements get animated by intersection observer
+    .anim-item{
+        opacity: 0;
+    }
+    .anim-item.in-view{
+        animation: fadeIn .5s ease forwards;
     }
 }
-
 
 
 
