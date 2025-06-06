@@ -1,4 +1,4 @@
-// Media Limit for this page's responsiveness: height: >650 width: >350
+// Media Limit for this page's responsiveness: height: >650 <1200 - width: >350 <2400
 
 @use "variables" as var;
 @use "sidebar";
@@ -58,10 +58,22 @@ html{
 }
 
 body{
-    display: flex;
     position: relative;
     overflow: hidden;
-
+    background: var.$dark-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+    
+    .max-container{
+        display: flex;
+        position: relative;
+        max-width: var.$max-width-limit;
+        max-height: var.$max-height-limit;
+        width: 100%;
+    }
+    
     h1{
         font-family: "Cormorant Garamond";
     }
@@ -82,14 +94,17 @@ body{
         background: radial-gradient(rgba(var.$accent-color, 0.05), transparent, transparent);
         width: 900px;
         height: 900px;
+        z-index: 9999999999999;
     }
 
     .window{
         flex: 1;
         background: var.$dark-color;
-
+        max-height: var.$max-height-limit;
+        
         .page{
             display: none;
+            max-height: var.$max-height-limit;
 
             &.active{
                 display: block;

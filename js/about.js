@@ -2,6 +2,7 @@
 const sectionSwitchButton = document.querySelector(".section-switch-button");
 const aboutPageSlider = document.querySelector(".page.about .slider");
 const landingPage = document.querySelector(".page.about")
+const landingPageSection1 = document.querySelector(".page.about .section1")
 
 let currentAboutSection = "section1";
 
@@ -13,7 +14,9 @@ sectionSwitchButton.addEventListener("click", () => {
     }
 
     if (currentAboutSection === "section1") {
-        aboutPageSlider.style.transform = "translateY(-100svh)"
+        // Scroll 1 section height (100svh but max 1200px)
+        const sectionHeight = landingPageSection1.getBoundingClientRect().height;
+        aboutPageSlider.style.transform = `translateY(-${sectionHeight}px)`;
         // change transform value depending on media query arrow position
         if (window.innerWidth < 570 && window.innerHeight < 700) {
             sectionSwitchButton.style.transform = "translate(-50%, 90px) rotate(180deg)"
