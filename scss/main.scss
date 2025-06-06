@@ -16,9 +16,39 @@
     font-family: "Inter", sans-serif;
     text-decoration: none;
     list-style: none;
+    -webkit-tap-highlight-color: transparent;
+
+    // Webkit scrollbar
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(var.$accent-color, 0.8);
+        border-radius: 2px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: var.$accent-color;
+    }
+    &::-webkit-scrollbar-corner {
+        background: none;
+    }
+
+    @media (max-width: 1500px) {
+        &::-webkit-scrollbar{
+            width: 3px;
+        }
+    }
+}
+
+// Firefox scrollbar
+@-moz-document url-prefix() {
+  * {
     scrollbar-width: thin;
     scrollbar-color: rgba(var.$accent-color, 0.8) transparent;
-    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 html{
