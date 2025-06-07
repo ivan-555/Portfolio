@@ -100,7 +100,7 @@
                             }
                         }
 
-                        button{
+                        .download-button{
                             width: fit-content;
                             background: none;
                             color: var.$font-color;
@@ -245,7 +245,7 @@
                             opacity: 0;
                         }
 
-                        button{
+                        .download-button{
                             animation: fadeIn .5s forwards ease;
                             animation-delay: 4.2s;
                             opacity: 0;
@@ -276,7 +276,7 @@
                                 animation-delay: 1.3s;
                             }
 
-                            button{
+                            .download-button{
                                 animation: fadeIn .5s forwards ease;
                                 animation-delay: 1.4s;
                             }
@@ -322,7 +322,7 @@
                             animation-delay: .9s;
                         }
 
-                        button{
+                        .download-button{
                             animation: fadeIn .5s forwards ease;
                             animation-delay: 1s;
                         }
@@ -421,7 +421,7 @@
                                 font-size: 1rem;
                             }
 
-                            button{
+                            .download-button{
                                 font-size: 1rem;
                                 padding: 8px 20px;
                             }
@@ -522,7 +522,7 @@
                                 width: 32px;
                             }
 
-                            button{
+                            .download-button{
                                 font-size: .95rem;
                                 padding: 8px 20px;
                             }
