@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend Webentwickler Portfolio">
     <title>Portfolio</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <!-- JS -->
-    <script type="module" src="js/sidebar.js" defer></script>
-    <script type="module" src="js/about.js" defer></script>
-    <script type="module" src="js/spotlight.js" defer></script>
-    <script type="module" src="js/projects.js" defer></script>
-    <script type="module" src="js/project.js" defer></script>
-    <script type="module" src="js/preloader.js" defer></script>
-    <script type="module" src="js/contact.js" defer></script>
+    <script type="module" src="js/sidebar.js"></script>
+    <script type="module" src="js/about.js"></script>
+    <script type="module" src="js/spotlight.js"></script>
+    <script type="module" src="js/projects.js"></script>
+    <script type="module" src="js/project.js"></script>
+    <script type="module" src="js/preloader.js"></script>
+    <script type="module" src="js/contact.js"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,12 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon -->
-    <link rel="icon" href="assets/Favicon.png" type="image/png">
+    <link rel="icon" href="assets/Favicon.webp" type="image/png">
+    <!-- Preload -->
+    <link rel="preload" as="image" href="assets/profile-picture.webp">
+    <link rel="modulepreload" href="js/sidebar.js">
+    <link rel="modulepreload" href="js/about.js">
+    <link rel="modulepreload" href="js/preloader.js">
 </head>
 <body>
     <div class="max-container">
@@ -29,9 +35,6 @@
             <div class="loader">
                 <div class="square-1 square"></div>
                 <div class="square-2 square"></div>
-            </div>
-            <div id="console">
-                <div id="console-output"><span id="console-cursor">|</span></div>
             </div>
         </div>
 
@@ -101,7 +104,7 @@
                     <div class="section1">
                         <div class="wrapper">
                             <div class="profile-picture">
-                                <img src="assets/profile-picture.png" alt="profile picture">
+                                <img src="assets/profile-picture.webp" alt="profile picture">
                             </div>
                             <div class="description">
                                 <h1>Hallo, ich bin <span>Ivan</span> </h1>
@@ -229,7 +232,7 @@
                     <li class="anim-item">Git</li>
                     <li class="anim-item">GitHub</li>
                 </ul>
-                <img src="assets/leitenschenke/main-img.png" class="main-img anim-item">
+                <img src="assets/leitenschenke/main-img.webp" class="main-img anim-item" loading="lazy">
                 <h3 class="features anim-item">Features</h3>
                 <h4 class="anim-item">Übersichtliche Navigation</h4>
                 <span class="anim-item">Sowohl auf Desktop als auch auf Mobilgeräten lässt sich die Seite übersichtlich mit Links navigieren.</span>
@@ -317,7 +320,7 @@
                     <li class="anim-item">Git</li>
                     <li class="anim-item">GitHub</li>
                 </ul>
-                <img src="assets/beatz/main-img.png" class="main-img anim-item">
+                <img src="assets/beatz/main-img.webp" class="main-img anim-item" loading="lazy">
                 <h3 class="features anim-item">Features</h3>
                 <h4 class="anim-item">Playlists</h4>
                 <span class="anim-item">Nutzer können zwischen verschiedenen Musik-Genres wie Rock, EDM und Relax navigieren.</span>
@@ -376,7 +379,7 @@
                 </div>
             </div>
 
-            <div class="page project ticktick ">
+            <div class="page project ticktick">
                 <i class="fa-solid fa-arrow-left return-btn"></i>
                 <h2 class="anim-item">TickTick</h2>
                 <h3 class="projektbeschreibung anim-item">Projektbeschreibung</h3>
@@ -394,7 +397,7 @@
                     <li class="anim-item">GitHub</li>
                     <li class="anim-item">Flatpickr</li>
                 </ul>
-                <img src="assets/ticktick/main-img.png" class="main-img anim-item">
+                <img src="assets/ticktick/main-img.webp" class="main-img anim-item" loading="lazy">
                 <h3 class="features anim-item">Features</h3>
                 <h4 class="anim-item">Aufgaben erstellen</h4>
                 <span class="anim-item">Nutzer können neue Aufgaben hinzufügen, als wichtig markieren und mit Datum versehen.</span>
@@ -460,7 +463,7 @@
                     <li class="anim-item">Model Viewer</li>
                     <li class="anim-item">PWA</li>
                 </ul>
-                <img src="assets/cosmio/main-img.png" class="main-img anim-item">
+                <img src="assets/cosmio/main-img.webp" class="main-img anim-item" loading="lazy">
                 <h3 class="features anim-item">Features</h3>
                 <h4 class="anim-item">3D Modelle</h4>
                 <span class="anim-item">Nutzer können realistische 3D-Modelle interaktiv erkunden.</span>
@@ -537,7 +540,7 @@
                     <li class="anim-item">Render</li>
                     <li class="anim-item">PWA</li>
                 </ul>
-                <img src="assets/livekick/main-img.png" class="main-img anim-item">
+                <img src="assets/livekick/main-img.webp" class="main-img anim-item" loading="lazy">
                 <h3 class="features anim-item">Features</h3>
                 <h4 class="anim-item">Express Proxy Server</h4>
                 <span class="observed wide mb anim-item">

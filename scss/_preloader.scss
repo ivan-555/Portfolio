@@ -9,10 +9,8 @@
   height: 100%;
   background-color: var.$dark-color;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
   z-index: 9999;
   max-width: var.$max-width-limit;
   max-height: var.$max-height-limit;
@@ -67,32 +65,9 @@
    }
   }
 
-  #console{
-    #console-output{
-      #console-cursor {
-        animation: blink 1s step-end infinite;
-      }
-
-      @keyframes blink {
-        0%, 49%   { opacity: 1; }
-        50%, 100% { opacity: 0; }
-      }
-    }
-  }
-
   &.hidden {
     opacity: 0;
     transition: opacity 0.5s ease-out;
     pointer-events: none;
-  }
-}
-
-@media (max-width: 500px) {
-  #preloader{
-    #console{
-      #console-output{
-        font-size: .9rem;
-      }
-    }
   }
 }
